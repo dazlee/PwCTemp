@@ -7,14 +7,14 @@ const basePath = config.basePath;
 
 function isHandleBarsFile (filePath) {
     return path.extname(filePath) === ".handlebars";
-};
+}
 
 var templates = {};
 // registering all input templates
 fs.readdir("./views/inputs", function(err, files) {
     files.forEach(function (file) {
-        const filePath = path.join(basePath, "views/inputs", file);
-        if (isHandleBarsFile(filePath)) {
+        if (isHandleBarsFile(file)) {
+            const filePath = path.join(basePath, "views/inputs", file);
             const baseName = path.basename(file, '.handlebars');
             fs.readFile(filePath, "utf8", function (error, data) {
                 if (error) {

@@ -5,14 +5,19 @@ const Handlebars = require("handlebars");
 const hbs = exphbs.create({
     defaultLayout: 'main',
     helpers: {
-        sheetBuilder: function (inputs) {
+        sheetBuilder: function (inputs, title) {
             var html = inputs.reduce(function (reduced, input) {
                 reduced += templates[input.type](input);
                 return reduced;
             }, "");
 
-            return new Handlebars.SafeString(html);
-        }
+            const form = templates.form({
+                title: title,
+                body: new Handlebars.SafeString(html),
+            });
+
+            return new Handlebars.SafeString(form);
+        },
     }
 });
 
