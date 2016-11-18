@@ -27,7 +27,7 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-app.get('/', require("./routes/home"));
+app.use('/', require("./routes/home"));
 
 // catch 404 and handle it
 app.use(function (req, res, next) {
