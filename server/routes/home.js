@@ -16,6 +16,10 @@ router.get("/", (req, res) => {
                 title: "日期",
             },
             {
+                type: "number",
+                title: "數字",
+            },
+            {
                 type: "date-range-picker",
                 title: "日期區間",
             },
