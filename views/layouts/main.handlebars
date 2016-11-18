@@ -111,6 +111,11 @@
 		$('.input-daterange input').each(function() {
 			$(this).datepicker("clearDates");
 		});
+		$('.input-datetimerange input').each(function() {
+			$(this).datetimepicker({
+				format: "yyyy/mm/dd hh:ii"
+			});
+		});
 	</script>
 </body>
 

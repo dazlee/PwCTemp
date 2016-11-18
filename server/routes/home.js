@@ -10,6 +10,13 @@ router.get("/", (req, res) => {
             {
                 type: "table",
                 title: "一般表格",
+                editable: false,
+                width: 12,
+            },
+            {
+                type: "table",
+                title: "可修改表格",
+                editable: true,
                 width: 12,
             },
             {
@@ -115,16 +122,61 @@ router.get("/loss", (req, res) => {
                 title: "個人金融部",
                 width: 4,
             },
-
             {
-                type: "text",
+                type: "table",
                 title: "相關行員",
-                width: 8,
+                editable: true,
+                width: 12,
             },
             {
                 type: "number",
                 title: "估計損失金額",
                 width: 4,
+            },
+            {
+                type: "radio-button",
+                title: "是否重大偶發事件",
+                width: 12,
+            },
+            {
+                type: "select",
+                title: "事件發生方式",
+                width: 12,
+            },
+            {
+                type: "select",
+                title: "事件發生地區",
+                width: 12,
+            },
+            {
+                type: "radio-button",
+                title: "是否違反法令或內部規定",
+                width: 12,
+            },
+            {
+                type: "text-area",
+                title: "改善方式",
+                width: 12,
+            },
+            {
+                type: "text-area",
+                title: "其他說明與備註",
+                width: 12,
+            },
+            {
+                type: "datetime-range-picker",
+                title: "系統中斷時間起迄",
+                width: 12,
+            },
+            {
+                type: "number",
+                title: "刷卡設備滅失數量",
+                width: 12,
+            },
+            {
+                type: "table",
+                title: "附件",
+                width: 12,
             },
         ]
     });

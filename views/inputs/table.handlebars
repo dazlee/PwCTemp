@@ -1,12 +1,24 @@
 <div class="form-group col-md-{{width}}">
     <label>{{title}}</label>
+
+    {{#if editable}}
+    <table class="table editable">
+    {{else}}
     <table class="table">
+    {{/if}}
+
         <thead>
             <tr>
                 <th>title1</th>
                 <th>title2</th>
                 <th>title3</th>
                 <th>title4</th>
+                <th>title2</th>
+                <th>title3</th>
+                <th>title4</th>
+                {{#if editable}}
+                <th></th>
+                {{/if}}
             </tr>
         </thead>
         <tbody>
@@ -23,7 +35,88 @@
                 <td>
                     body4
                 </td>
+                <td>
+                    body2
+                </td>
+                <td>
+                    body3
+                </td>
+                <td>
+                    body4
+                </td>
+                {{#if editable}}
+                <td style="width: 135px;">
+                    <a href="#" class="btn btn-warning">修改</a>
+                    <a href="#" class="btn btn-danger">刪除</a>
+                </td>
+                {{/if}}
             </tr>
+            <tr>
+                <td>
+                    body1
+                </td>
+                <td>
+                    body2
+                </td>
+                <td>
+                    body3
+                </td>
+                <td>
+                    body4
+                </td>
+                <td>
+                    body2
+                </td>
+                <td>
+                    body3
+                </td>
+                <td>
+                    body4
+                </td>
+                {{#if editable}}
+                <td style="width: 135px;">
+                    <a href="#" class="btn btn-warning">修改</a>
+                    <a href="#" class="btn btn-danger">刪除</a>
+                </td>
+                {{/if}}
+            </tr>
+
+            {{#if editable}}
+            <tr>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td>
+                    <input type="text" class="form-control"/>
+                </td>
+                <td style="width: 135px;">
+                    <a href="#" class="btn btn-success">完成</a>
+                </td>
+            </tr>
+            {{/if}}
+
         </tbody>
     </table>
+    {{#if editable}}
+        <div class="pull-right">
+            <a href="#" class="btn btn-default">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </a>
+        </div>
+    {{/if}}
 </div>

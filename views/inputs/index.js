@@ -21,6 +21,7 @@ fs.readdir("./views/inputs", function(err, files) {
                     console.log(error);
                     return;
                 }
+                Handlebars.registerPartial(baseName, data);
                 templates[baseName] = Handlebars.compile(data);
             });
         }
