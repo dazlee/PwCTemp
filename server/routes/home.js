@@ -12,6 +12,18 @@ router.get("/", (req, res) => {
                 title: "單行文字",
             },
             {
+                type: "date-picker",
+                title: "日期",
+            },
+            {
+                type: "date-range-picker",
+                title: "日期區間",
+            },
+            {
+                type: "datetime-picker",
+                title: "日期時間",
+            },
+            {
                 type: "checkbox",
                 title: "多選盒",
             },
