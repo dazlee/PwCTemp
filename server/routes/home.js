@@ -23,6 +23,8 @@ router.get("/", (req, res) => {
                 type: "text",
                 title: "單行文字",
                 width: 6,
+                key: "key",
+                value: "你好嗎",
             },
             {
                 type: "date-picker",
@@ -76,6 +78,10 @@ router.get("/", (req, res) => {
             }
         ]
     });
+});
+router.post("/", (req, res) => {
+    console.log(req.body);
+    res.redirect("/");
 });
 
 router.get("/loss", (req, res) => {
