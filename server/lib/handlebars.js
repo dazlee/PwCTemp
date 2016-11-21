@@ -18,6 +18,12 @@ const hbs = exphbs.create({
 
             return new Handlebars.SafeString(form);
         },
+        compare: function (value, item, options) {
+            if( value === item.value ) {
+                return options.fn(this);
+            }
+            return options.inverse(this);
+        },
     }
 });
 

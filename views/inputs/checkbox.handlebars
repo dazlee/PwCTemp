@@ -1,23 +1,14 @@
 <div class="form-group col-md-{{width}}">
     <label>{{title}}</label>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" value="">Checkbox 1
-        </label>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" value="">Checkbox 2
-        </label>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" value="">Checkbox 3
-        </label>
-    </div>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" value="">Checkbox 4
-        </label>
-    </div>
+    {{#each options}}
+        <div class="checkbox">
+            <label>
+                {{#if selected}}
+                <input name="{{../key}}" type="checkbox" value="{{value}}" checked>{{name}}
+                {{else}}
+                <input name="{{../key}}" type="checkbox" value="{{value}}">{{name}}
+                {{/if}}
+            </label>
+        </div>
+    {{/each}}
 </div>

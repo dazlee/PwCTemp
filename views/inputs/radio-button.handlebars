@@ -1,23 +1,14 @@
 <div class="form-group col-md-{{width}}">
     <label>{{title}}</label>
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Radio Button 1
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Radio Button 2
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio Button 3
-        </label>
-    </div>
-    <div class="radio">
-        <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Radio Button 4
-        </label>
-    </div>
+    {{#each options}}
+        <div class="radio">
+            <label>
+                {{#if selected}}
+                    <input name="{{../key}}" value="{{value}}" type="radio" checked>{{name}}
+                {{else}}
+                    <input name="{{../key}}" value="{{value}}" type="radio">{{name}}
+                {{/if}}
+            </label>
+        </div>
+    {{/each}}
 </div>

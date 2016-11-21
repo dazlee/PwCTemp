@@ -29,6 +29,8 @@ router.get("/", (req, res) => {
             {
                 type: "date-picker",
                 title: "日期",
+                key: "date-picker",
+                value: "2016/11/08",
                 width: 6,
             },
             {
@@ -39,16 +41,55 @@ router.get("/", (req, res) => {
             {
                 type: "date-range-picker",
                 title: "日期區間",
+                key: "date-range-picker",
+                value: {
+                    from: "2016/11/08",
+                    to: "2016/11/20"
+                },
                 width: 12,
             },
             {
                 type: "datetime-picker",
                 title: "日期時間",
+                key: "datetime-picker",
+                value: "2016/11/08 10:55",
+                width: 12,
+            },
+            {
+                type: "datetime-range-picker",
+                title: "日期時間區間",
+                key: "datetime-range-picker",
+                value: {
+                    from: "2016/11/08 10:55",
+                    to: "2016/11/20 10:55"
+                },
                 width: 12,
             },
             {
                 type: "checkbox",
                 title: "多選盒",
+                key: "checkkkk",
+                value: ["che1", "che2"],
+                options: [
+                    {
+                        name: "選項一",
+                        value: "che1",
+                        selected: true,
+                    },
+                    {
+                        name: "選項2",
+                        value: "che2",
+                        selected: true,
+                    },
+                    {
+                        name: "選項3",
+                        value: "ch3"
+                    },
+                    {
+                        name: "選項4",
+                        value: "che4"
+                    }
+                ],
                 width: 12,
             },
             {
@@ -106,16 +147,41 @@ router.get("/loss", (req, res) => {
             {
                 type: "text",
                 title: "其他",
+                key: "kkask",
+                value: "科科科科ㄎ",
                 width: 4,
             },
             {
                 type: "text-area",
                 title: "事件說明",
+                key: "kkk",
+                value: "科科科科ㄎ",
                 width: 12,
             },
             {
                 type: "select",
                 title: "風險成因",
+                key: "kkk",
+                value: "op3",
+                options: [
+                    {
+                        value: "op1",
+                        name: "第一"
+                    },
+                    {
+                        value: "op2",
+                        name: "第2"
+                    },
+                    {
+                        selected: true,
+                        value: "op3",
+                        name: "第3"
+                    },
+                    {
+                        value: "op4",
+                        name: "第4"
+                    }
+                ],
                 width: 12,
             },
             {
@@ -142,6 +208,27 @@ router.get("/loss", (req, res) => {
             {
                 type: "radio-button",
                 title: "是否重大偶發事件",
+                key: "keyy",
+                value: "op4",
+                options: [
+                    {
+                        value: "op1",
+                        name: "第一"
+                    },
+                    {
+                        value: "op2",
+                        name: "第2"
+                    },
+                    {
+                        selected: true,
+                        value: "op3",
+                        name: "第3"
+                    },
+                    {
+                        value: "op4",
+                        name: "第4"
+                    }
+                ],
                 width: 12,
             },
             {
@@ -178,6 +265,8 @@ router.get("/loss", (req, res) => {
                 type: "number",
                 title: "刷卡設備滅失數量",
                 width: 12,
+                key: "number",
+                value: 1234
             },
             {
                 type: "table",
