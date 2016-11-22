@@ -930,3 +930,10 @@ h1.page-header {
 	height: 65px;
 	overflow: scroll;
 }
+
+
+input.lockable[disabled] {
+	border: none;
+	background-color: white;
+	cursor: inherit;
+}
