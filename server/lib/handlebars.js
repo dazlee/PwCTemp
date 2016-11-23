@@ -21,8 +21,13 @@ Handlebars.registerHelper("compare", function (value1, value2, options) {
     return options.inverse(this);
 });
 Handlebars.registerHelper("in", function (value, array, options) {
-    console.log(value);
     if( array.indexOf(value) >= 0 ) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
+Handlebars.registerHelper("isArray", function (item, options) {
+    if(Array.isArray(item)) {
         return options.fn(this);
     }
     return options.inverse(this);
