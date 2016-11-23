@@ -1,4 +1,12 @@
 <div class="form-group col-md-{{width}}">
     <label>{{title}}</label>
-    <input name="{{key}}" value="{{value}}" type="number" class="form-control">
+    <div class="input-group">
+        {{#if front}}
+        <span class="input-group-addon">{{front}}</span>
+        {{/if}}
+        <input name="{{key}}" value="{{value}}" type="number" class="form-control">
+        {{#if tail}}
+        <span class="input-group-addon">{{tail}}</span>
+        {{/if}}
+    </div>
 </div>

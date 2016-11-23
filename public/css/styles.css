@@ -937,3 +937,9 @@ input.lockable[disabled] {
 	background-color: white;
 	cursor: inherit;
 }
+
+
+.radio-buttons .radio {
+	display: inline-block;
+	margin-right: 14px;
+}

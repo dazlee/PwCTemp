@@ -28,6 +28,7 @@ app.use(session({
 }));
 
 app.use('/', require("./routes/home"));
+app.use('/orsm', require("./routes/orsm"));
 app.use('/sheet', require("./routes/sheet"));
 
 // catch 404 and handle it
