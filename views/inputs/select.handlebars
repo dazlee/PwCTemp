@@ -2,11 +2,11 @@
     <label>{{title}}</label>
     <select class="form-control" value="{{value}}">
         {{#each options}}
-            {{#if selected}}
+            {{#compare value ../value}}
                 <option value="{{value}}" selected>{{name}}</option>
             {{else}}
                 <option value="{{value}}">{{name}}</option>
-            {{/if}}
+            {{/compare}}
         {{/each}}
     </select>
 </div>

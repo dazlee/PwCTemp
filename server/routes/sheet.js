@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-const templates = require("../../views/inputs");
-
 router.get("/", (req, res) => {
     res.render("sheet", {
         title: "可用inputs",

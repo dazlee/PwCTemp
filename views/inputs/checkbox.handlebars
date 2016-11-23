@@ -3,11 +3,11 @@
     {{#each options}}
         <div class="checkbox">
             <label>
-                {{#if selected}}
+                {{#in value ../value}}
                 <input name="{{../key}}" type="checkbox" value="{{value}}" checked>{{name}}
                 {{else}}
                 <input name="{{../key}}" type="checkbox" value="{{value}}">{{name}}
-                {{/if}}
+                {{/in}}
             </label>
         </div>
     {{/each}}

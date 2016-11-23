@@ -12,10 +12,17 @@ const hbs = exphbs.create({
 module.exports = hbs;
 
 // initial handlebars
-var Handlebars = hbs.handlebars;
+const Handlebars = hbs.handlebars;
 var templates = {};
 Handlebars.registerHelper("compare", function (value1, value2, options) {
     if( value1 === value2 ) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
+Handlebars.registerHelper("in", function (value, array, options) {
+    console.log(value);
+    if( array.indexOf(value) >= 0 ) {
         return options.fn(this);
     }
     return options.inverse(this);

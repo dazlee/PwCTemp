@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-const templates = require("../../views/inputs");
-
 router.get("/", (req, res) => {
     res.render("home", {
     });
@@ -41,10 +39,35 @@ router.get("/loss", (req, res) => {
                 width: 12,
             },
             {
+                type: "checkbox",
+                title: "Checkbox",
+                key: "kkkaaa",
+                value: ["op1", "op2", "op3"],
+                options: [
+                    {
+                        value: "op1",
+                        name: "第一11"
+                    },
+                    {
+                        value: "op2",
+                        name: "第222"
+                    },
+                    {
+                        value: "op3",
+                        name: "第3333"
+                    },
+                    {
+                        value: "op4",
+                        name: "第4444"
+                    }
+                ],
+                width: 12,
+            },
+            {
                 type: "select",
                 title: "風險成因",
                 key: "kkk",
-                value: "op3",
+                value: "op1",
                 options: [
                     {
                         value: "op1",
@@ -55,7 +78,6 @@ router.get("/loss", (req, res) => {
                         name: "第2"
                     },
                     {
-                        selected: true,
                         value: "op3",
                         name: "第3"
                     },
