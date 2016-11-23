@@ -4,11 +4,11 @@
     {{#each options}}
         <div class="radio">
             <label>
-                {{#if selected}}
+                {{#compare ../value value}}
                     <input name="{{../key}}" value="{{value}}" type="radio" checked>{{name}}
                 {{else}}
                     <input name="{{../key}}" value="{{value}}" type="radio">{{name}}
-                {{/if}}
+                {{/compare}}
             </label>
         </div>
     {{/each}}

@@ -128,50 +128,59 @@ router.get("/", (req, res) => {
                         name: "行員姓名",
                         value: "name",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "員工編號",
                         value: "id_code",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "科/組/課別",
                         value: "department",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "年齡",
                         value: "age",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "性別",
                         value: "gender",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "進行日期",
                         value: "date",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "職稱",
                         value: "position",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "工作項目",
                         value: "job_description",
                         type: "text",
+                        colspan: 1,
                     },
                     {
                         name: "任本職務期間",
                         value: "job_duration",
-                        type: "text",
+                        type: ["text", "text"],
+                        colspan: 2,
                     },
                 ],
                 value: [
-                    ["王ＸＸ", "1234", "000", 28, "女", "2011/05/06", "高辦", "協助客戶進行開戶及存款業務", "2014/01/01 ~ 迄今"],
+                    ["王ＸＸ", "1234", "000", 28, "女", "2011/05/06", "高辦", "協助客戶進行開戶及存款業務", "2014/01/01", "迄今"],
                 ],
                 width: 12,
             },
@@ -188,14 +197,13 @@ router.get("/", (req, res) => {
                 type: "radio-button",
                 title: "是否重大偶發事件",
                 key: "serious_occational_event",
-                value: "no",
+                value: "yes",
                 options: [
                     {
                         value: "yes",
                         name: "是"
                     },
                     {
-                        selected: true,
                         value: "no",
                         name: "否"
                     },

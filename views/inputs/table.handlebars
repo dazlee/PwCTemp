@@ -8,7 +8,7 @@
         <thead>
             <tr>
             {{#each headers}}
-                <th>{{name}}</th>
+                <th colspan="{{colspan}}">{{name}}</th>
             {{/each}}
             {{#if editable}}
                 <th></th>
@@ -48,9 +48,11 @@
         {{#if editable}}
         <tr class="editable-row">
             {{#each headers}}
+                {{#each type}}
                 <td>
                     <input type="text" class="form-control"/>
                 </td>
+                {{/each}}
             {{/each}}
             <td style="width: 135px;">
                 <a href="#" class="add-button btn btn-primary">新增</a>
