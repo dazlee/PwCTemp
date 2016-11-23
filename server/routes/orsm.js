@@ -6,6 +6,112 @@ router.get("/", (req, res) => {
         title: "損失事件管理",
         sheet: [
             {
+                type: "modal",
+                title: "地點",
+                key: "location",
+                value: "taipei",
+                sheet: [
+                    {
+                        type: "tabs",
+                        tabs: [
+                            {
+                                tabId: "north",
+                                name: "北部",
+                                sheet: [
+                                    {
+                                        type: "radio-button",
+                                        title: "地點",
+                                        key: "location",
+                                        value: "taipei",
+                                        options: [
+                                            {
+                                                name: "台北市",
+                                                value: "taipei",
+                                            },
+                                            {
+                                                name: "新竹市",
+                                                value: "hsinchu",
+                                            }
+                                        ],
+                                        width: 8,
+                                    },
+                                ],
+                            },
+                            {
+                                tabId: "central",
+                                name: "中部",
+                                sheet: [
+                                    {
+                                        type: "radio-button",
+                                        title: "地點",
+                                        key: "location",
+                                        value: "taipei",
+                                        options: [
+                                            {
+                                                name: "彰化市",
+                                                value: "chaunghua",
+                                            },
+                                            {
+                                                name: "台中市",
+                                                value: "taichung",
+                                            }
+                                        ],
+                                        width: 8,
+                                    },
+                                ],
+                            },
+                            {
+                                tabId: "south",
+                                name: "南部",
+                                sheet: [
+                                    {
+                                        type: "radio-button",
+                                        title: "地點",
+                                        key: "location",
+                                        value: "taipei",
+                                        options: [
+                                            {
+                                                name: "台南市",
+                                                value: "tainan",
+                                            },
+                                            {
+                                                name: "高雄市",
+                                                value: "kao",
+                                            }
+                                        ],
+                                        width: 8,
+                                    },
+                                ],
+                            },
+                            {
+                                tabId: "east",
+                                name: "東部",
+                                sheet: [
+                                    {
+                                        type: "radio-button",
+                                        title: "地點",
+                                        key: "location",
+                                        value: "taipei",
+                                        options: [
+                                            {
+                                                name: "台東市",
+                                                value: "taitung",
+                                            },
+                                            {
+                                                name: "花蓮市",
+                                                value: "hualiang",
+                                            }
+                                        ],
+                                        width: 8,
+                                    },
+                                ],
+                            }
+                        ],
+                    },
+                ],
+                width: 12,
+            },
+            {
                 type: "date-picker",
                 title: "事件發生日期",
                 key: "happened_date",

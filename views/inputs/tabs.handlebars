@@ -1,0 +1,14 @@
+<div class="tabs">
+    <ul class="nav nav-pills menus" role="tablist">
+    {{#each tabs}}
+        <li role="presentation"><a href="#tab-{{tabId}}">{{name}}</a></li>
+    {{/each}}
+    </ul>
+    <div class="tab-content">
+    {{#each tabs}}
+        <div role="tabpanel" class="tab-pane" id="tab-{{tabId}}">
+            {{sheetBuilder sheet}}
+        </div>
+    {{/each}}
+    </div>
+</div>

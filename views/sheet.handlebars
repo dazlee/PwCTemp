@@ -1,4 +1,12 @@
 <h1>風險自評管理</h1>
-{{#if sheet}}
-    {{sheetBuilder sheet title}}
-{{/if}}
+<div class="panel panel-default">
+    <div class="panel-heading">{{title}}</div>
+    <div class="panel-body">
+        <form role="form" method="post">
+            {{sheetBuilder sheet}}
+            <div class="form-group col-md-12">
+                <input type="submit" class="btn btn-primary" value="送出"/>
+            </div>
+        </form>
+    </div>
+</div>

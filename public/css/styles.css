@@ -943,3 +943,10 @@ input.lockable[disabled] {
 	display: inline-block;
 	margin-right: 14px;
 }
+
+
+.clear::after {
+	clear: both;
+	content: "";
+	display: table;
+}

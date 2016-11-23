@@ -38,12 +38,7 @@ Handlebars.registerHelper("sheetBuilder", function (inputs, title) {
         return reduced;
     }, "");
 
-    const form = templates.form({
-        title: title,
-        body: new Handlebars.SafeString(html),
-    });
-
-    return new Handlebars.SafeString(form);
+    return new Handlebars.SafeString(html);
 });
 
 
