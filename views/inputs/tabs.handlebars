@@ -7,7 +7,9 @@
     <div class="tab-content">
     {{#each tabs}}
         <div role="tabpanel" class="tab-pane" id="tab-{{tabId}}">
-            {{sheetBuilder sheet}}
+            {{#get ../tabSheet tabId}}
+                {{sheetBuilder this}}
+            {{/get}}
         </div>
     {{/each}}
     </div>

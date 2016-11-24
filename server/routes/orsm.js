@@ -17,96 +17,98 @@ router.get("/", (req, res) => {
                             {
                                 tabId: "north",
                                 name: "北部",
-                                sheet: [
-                                    {
-                                        type: "radio-button",
-                                        title: "地點",
-                                        key: "location",
-                                        value: "taipei",
-                                        options: [
-                                            {
-                                                name: "台北市",
-                                                value: "taipei",
-                                            },
-                                            {
-                                                name: "新竹市",
-                                                value: "hsinchu",
-                                            }
-                                        ],
-                                        width: 8,
-                                    },
-                                ],
                             },
                             {
                                 tabId: "central",
                                 name: "中部",
-                                sheet: [
-                                    {
-                                        type: "radio-button",
-                                        title: "地點",
-                                        key: "location",
-                                        value: "taipei",
-                                        options: [
-                                            {
-                                                name: "彰化市",
-                                                value: "chaunghua",
-                                            },
-                                            {
-                                                name: "台中市",
-                                                value: "taichung",
-                                            }
-                                        ],
-                                        width: 8,
-                                    },
-                                ],
                             },
                             {
                                 tabId: "south",
                                 name: "南部",
-                                sheet: [
-                                    {
-                                        type: "radio-button",
-                                        title: "地點",
-                                        key: "location",
-                                        value: "taipei",
-                                        options: [
-                                            {
-                                                name: "台南市",
-                                                value: "tainan",
-                                            },
-                                            {
-                                                name: "高雄市",
-                                                value: "kao",
-                                            }
-                                        ],
-                                        width: 8,
-                                    },
-                                ],
                             },
                             {
                                 tabId: "east",
                                 name: "東部",
-                                sheet: [
-                                    {
-                                        type: "radio-button",
-                                        title: "地點",
-                                        key: "location",
-                                        value: "taipei",
-                                        options: [
-                                            {
-                                                name: "台東市",
-                                                value: "taitung",
-                                            },
-                                            {
-                                                name: "花蓮市",
-                                                value: "hualiang",
-                                            }
-                                        ],
-                                        width: 8,
-                                    },
-                                ],
                             }
                         ],
+                        tabSheet: {
+                            north: [
+                                {
+                                    type: "radio-button",
+                                    title: "地點",
+                                    key: "location",
+                                    value: "taipei",
+                                    options: [
+                                        {
+                                            name: "台北市",
+                                            value: "taipei",
+                                        },
+                                        {
+                                            name: "新竹市",
+                                            value: "hsinchu",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            central: [
+                                {
+                                    type: "radio-button",
+                                    title: "地點",
+                                    key: "location",
+                                    value: "taipei",
+                                    options: [
+                                        {
+                                            name: "彰化市",
+                                            value: "chaunghua",
+                                        },
+                                        {
+                                            name: "台中市",
+                                            value: "taichung",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            south: [
+                                {
+                                    type: "radio-button",
+                                    title: "地點",
+                                    key: "location",
+                                    value: "taipei",
+                                    options: [
+                                        {
+                                            name: "台南市",
+                                            value: "tainan",
+                                        },
+                                        {
+                                            name: "高雄市",
+                                            value: "kao",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            east: [
+                                {
+                                    type: "radio-button",
+                                    title: "地點",
+                                    key: "location",
+                                    value: "taipei",
+                                    options: [
+                                        {
+                                            name: "台東市",
+                                            value: "taitung",
+                                        },
+                                        {
+                                            name: "花蓮市",
+                                            value: "hualiang",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                        }
                     },
                 ],
                 width: 12,

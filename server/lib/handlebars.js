@@ -1,3 +1,4 @@
+const logger = require("./logger");
 const path = require("path");
 const fs = require("fs");
 const exphbs  = require('express-handlebars');
@@ -40,11 +41,10 @@ Handlebars.registerHelper("sheetBuilder", function (inputs, title) {
 
     return new Handlebars.SafeString(html);
 });
+Handlebars.registerHelper("get", function (obj, key, options) {
+    return options.fn(obj[key]);
+});
 
-
-function isHandlebarsFile (filePath) {
-    return path.extname(filePath) === ".handlebars";
-}
 // registering all input templates
 fs.readdir(path.join(basePath, "views/inputs"), function(err, files) {
     files.forEach(function (file) {
@@ -53,7 +53,7 @@ fs.readdir(path.join(basePath, "views/inputs"), function(err, files) {
             const baseName = path.basename(file, '.handlebars');
             fs.readFile(filePath, "utf8", function (error, data) {
                 if (error) {
-                    console.log(error);
+                    logger.error("Error when registering templates", error);
                     return;
                 }
                 Handlebars.registerPartial(baseName, data);
@@ -62,3 +62,7 @@ fs.readdir(path.join(basePath, "views/inputs"), function(err, files) {
         }
     });
 });
+
+function isHandlebarsFile (filePath) {
+    return path.extname(filePath) === ".handlebars";
+}
