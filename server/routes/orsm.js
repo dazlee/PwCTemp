@@ -305,15 +305,19 @@ router.get("/", (req, res) => {
                 type: "radio-button",
                 title: "是否重大偶發事件",
                 key: "serious_occational_event",
-                value: "yes",
+                value: "no",
                 options: [
                     {
                         value: "yes",
-                        name: "是"
+                        name: "是",
                     },
                     {
                         value: "no",
-                        name: "否"
+                        name: "否",
+                        remark: {
+                            key: "serious_occational_event_remark",
+                            value: "非重大偶發"
+                        },
                     },
                 ],
                 width: 12,

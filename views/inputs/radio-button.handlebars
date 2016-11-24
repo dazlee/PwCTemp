@@ -2,14 +2,22 @@
     <label>{{title}}</label>
     <div class="radio-buttons">
     {{#each options}}
-        <div class="radio">
+        <div class="radio checkbox">
             <label>
-                {{#compare value ../value}}
-                    <input name="{{../key}}" value="{{value}}" type="radio" checked>{{name}}
-                {{else}}
-                    <input name="{{../key}}" value="{{value}}" type="radio">{{name}}
-                {{/compare}}
+            {{#compare value ../value}}
+                <input name="{{../key}}" value="{{value}}" type="radio" checked>{{name}}
+            {{else}}
+                <input name="{{../key}}" value="{{value}}" type="radio">{{name}}
+            {{/compare}}
             </label>
+        {{#with remark}}
+        {{#compare ../value ../../value}}
+            <input name="{{name}}" value="{{value}}" type="text" class="remark form-control">
+        {{else}}
+            <input name="{{name}}" value="{{value}}" type="text" class="remark form-control" disabled>
+        {{/compare}}
+        {{else}}
+        {{/with}}
         </div>
     {{/each}}
     </div>

@@ -943,6 +943,10 @@ input.lockable[disabled] {
 	display: inline-block;
 	margin-right: 14px;
 }
+.radio-buttons .radio .remark {
+	display: inline-block;
+	width: auto;
+}
 
 
 .clear::after {
