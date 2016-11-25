@@ -1,0 +1,32 @@
+<div class="two-layer-selection-wrapper form-group col-md-{{width}}">
+    <label>{{title}}</label>
+    <div class="row">
+        <div class="col-md-6">
+            <select class="first-layer form-control" value="{{value}}">
+                {{#each options}}
+                    {{#compare value ../value}}
+                        <option value="{{value}}" selected>{{name}}</option>
+                    {{else}}
+                        <option value="{{value}}">{{name}}</option>
+                    {{/compare}}
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-md-6">
+            <select class="second-layer form-control" value="{{value}}">
+                {{#each options}}
+                {{#get ../subOptions value}}
+                    {{#each this}}
+                        {{#compare value ../../../subValue}}
+                            <option data-parent="{{../../value}}" value="{{value}}" selected>{{name}}</option>
+                        {{else}}
+                            <option data-parent="{{../../value}}" value="{{value}}">{{name}}</option>
+                        {{/compare}}
+                    {{/each}}
+                {{/get}}
+                {{/each}}
+            </select>
+        </div>
+
+    </div>
+</div>

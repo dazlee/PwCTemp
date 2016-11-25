@@ -6,6 +6,63 @@ router.get("/", (req, res) => {
         title: "損失事件管理",
         sheet: [
             {
+                type: "two-layer-selection",
+                title: "2 layer selection",
+                key: "mainKey",
+                subKey: "subKey",
+                value: "staff_cheat",
+                subValue: "wrong_account1",
+                width: 12,
+                options: [
+                    {
+                        name: "人員舞弊",
+                        value: "staff_cheat",
+                    },
+                    {
+                        name: "信託基金作業錯帳",
+                        value: "wrong_account",
+                    },
+                ],
+                subOptions: {
+                    staff_cheat: [
+                        {
+                            name: "人員舞弊1",
+                            value: "staff_cheat1",
+                        },
+                        {
+                            name: "信託基金作業錯帳1",
+                            value: "wrong_account1",
+                        },
+                        {
+                            name: "匯款作業疏失1",
+                            value: "wire_transfer_wrong1",
+                        },
+                        {
+                            name: "偽冒開戶1",
+                            value: "fake_create_account1",
+                        }
+                    ],
+                    wrong_account: [
+                        {
+                            name: "人員舞弊2",
+                            value: "staff_cheat2",
+                        },
+                        {
+                            name: "信託基金作業錯帳2",
+                            value: "wrong_account2",
+                        },
+                        {
+                            name: "匯款作業疏失2",
+                            value: "wire_transfer_wrong2",
+                        },
+                        {
+                            name: "偽冒開戶2",
+                            value: "fake_create_account2",
+                        }
+                    ]
+                }
+            },
+            {
                 type: "modal",
                 title: "地點",
                 key: "location",

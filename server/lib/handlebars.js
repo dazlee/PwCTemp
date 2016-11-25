@@ -41,6 +41,9 @@ Handlebars.registerHelper("sheetBuilder", function (inputs, title) {
 
     return new Handlebars.SafeString(html);
 });
+Handlebars.registerHelper("stringify", function (data) {
+    return new Handlebars.SafeString(JSON.stringify(data));
+});
 Handlebars.registerHelper("get", function (obj, key, options) {
     return options.fn(obj[key]);
 });
