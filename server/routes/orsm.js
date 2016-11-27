@@ -168,7 +168,7 @@ router.get("/", (req, res) => {
                         }
                     },
                 ],
-                width: 12,
+                width: 8,
             },
             {
                 type: "date-picker",

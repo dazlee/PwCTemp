@@ -5,9 +5,9 @@
         <div class="radio checkbox">
             <label>
             {{#compare value ../value}}
-                <input name="{{../key}}" value="{{value}}" type="radio" checked>{{name}}
+                <input name="{{../key}}" value="{{value}}" type="radio" data-name="{{name}}" checked>{{name}}
             {{else}}
-                <input name="{{../key}}" value="{{value}}" type="radio">{{name}}
+                <input name="{{../key}}" value="{{value}}" type="radio" data-name="{{name}}">{{name}}
             {{/compare}}
             </label>
         {{#with remark}}

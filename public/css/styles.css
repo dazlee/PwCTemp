@@ -954,3 +954,9 @@ input.lockable[disabled] {
 	content: "";
 	display: table;
 }
+
+
+.form-modal .main-input {
+	cursor: inherit;
+	background-color: white; 
+}
