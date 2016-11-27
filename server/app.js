@@ -19,7 +19,7 @@ app.use(connectionLogger("dev"));
 app.use(cookieParser());
 app.use(bodyParser.raw());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash());
 app.use(session({
     secret: config.secret,

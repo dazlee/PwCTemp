@@ -22,12 +22,10 @@
             <tr class="info-row">
             {{#each this}}
                 <td>
-                    <input name="{{../../key}}.{{@index}}" type="text" class="form-control lockable" value="{{this}}" disabled/>
+                    <input name="{{../../key}}[{{@../index}}][{{key}}]" type="{{type}}" class="form-control lockable" value="{{value}}"/>
                 </td>
             {{/each}}
                 <td style="width: 135px;">
-                    <a href="#" class="completed-button btn btn-success hidden">完成</a>
-                    <a href="#" class="edit-button btn btn-warning">修改</a>
                     <a href="#" class="delete-button btn btn-danger">刪除</a>
                 </td>
             </tr>
@@ -50,13 +48,15 @@
             {{#each headers}}
                 {{#isArray type}}
                 {{#each type}}
-                <td>
-                    <input type="text" class="form-control"/>
-                </td>
+                    {{#get ../value @index}}
+                    <td>
+                        <input name="{{../../../key}}[0][{{this}}]" type="text" class="form-control lockable" disabled/>
+                    </td>
+                    {{/get}}
                 {{/each}}
                 {{else}}
                 <td>
-                    <input type="text" class="form-control"/>
+                    <input name="{{../key}}[0][{{value}}]" type="text" class="form-control lockable" disabled/>
                 </td>
                 {{/isArray}}
             {{/each}}

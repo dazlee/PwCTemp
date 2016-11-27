@@ -251,10 +251,111 @@ router.get("/", (req, res) => {
                 width: 12,
             },
             {
-                type: "text",
+                type: "modal",
                 title: "事件發生單位",
                 key: "event_happened_unit",
-                value: "003 中和分行",
+                value: "003_chung",
+                sheet: [
+                    {
+                        type: "tabs",
+                        tabs: [
+                            {
+                                tabId: "event_happened_unit_north",
+                                name: "北部",
+                            },
+                            {
+                                tabId: "event_happened_unit_central",
+                                name: "中部",
+                            },
+                            {
+                                tabId: "event_happened_unit_south",
+                                name: "南部",
+                            },
+                            {
+                                tabId: "event_happened_unit_east",
+                                name: "東部",
+                            }
+                        ],
+                        tabSheet: {
+                            event_happened_unit_north: [
+                                {
+                                    type: "radio-button",
+                                    title: "事件發生單位",
+                                    key: "event_happened_unit",
+                                    value: "003_chung",
+                                    options: [
+                                        {
+                                            name: "003中和分行",
+                                            value: "003_chung",
+                                        },
+                                        {
+                                            name: "004永和分行",
+                                            value: "004_young",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            event_happened_unit_central: [
+                                {
+                                    type: "radio-button",
+                                    title: "事件發生單位",
+                                    key: "event_happened_unit",
+                                    value: "003_chung",
+                                    options: [
+                                        {
+                                            name: "005台中分行",
+                                            value: "005_taichung",
+                                        },
+                                        {
+                                            name: "006北屯分行",
+                                            value: "006_peitung",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            event_happened_unit_south: [
+                                {
+                                    type: "radio-button",
+                                    title: "事件發生單位",
+                                    key: "event_happened_unit",
+                                    value: "003_chung",
+                                    options: [
+                                        {
+                                            name: "007台南分行",
+                                            value: "007_tainan",
+                                        },
+                                        {
+                                            name: "008東區分行",
+                                            value: "008_dongs",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                            event_happened_unit_east: [
+                                {
+                                    type: "radio-button",
+                                    title: "事件發生單位",
+                                    key: "event_happened_unit",
+                                    value: "003_chung",
+                                    options: [
+                                        {
+                                            name: "009台東分行",
+                                            value: "009_taitung",
+                                        },
+                                        {
+                                            name: "010花蓮分行",
+                                            value: "010_hualiang",
+                                        }
+                                    ],
+                                    width: 8,
+                                },
+                            ],
+                        }
+                    },
+                ],
                 width: 8,
             },
             {
@@ -339,13 +440,64 @@ router.get("/", (req, res) => {
                     },
                     {
                         name: "任本職務期間",
-                        value: "job_duration",
+                        value: ["job_duration_from", "job_duration_to"],
                         type: ["text", "text"],
                         colspan: 2,
                     },
                 ],
                 value: [
-                    ["王ＸＸ", "1234", "000", 28, "女", "2011/05/06", "高辦", "協助客戶進行開戶及存款業務", "2014/01/01", "迄今"],
+                    [
+                        {
+                            type: "text",
+                            key: "name",
+                            value: "王ＸＸ",
+                        },
+                        {
+                            type: "text",
+                            key: "id_code",
+                            value: "1234",
+                        },
+                        {
+                            type: "text",
+                            key: "department",
+                            value: "000",
+                        },
+                        {
+                            key: "age",
+                            type: "text",
+                            value: 28,
+                        },
+                        {
+                            key: "gender",
+                            type: "text",
+                            value: "女",
+                        },
+                        {
+                            key: "date",
+                            type: "text",
+                            value: "2011/05/06",
+                        },
+                        {
+                            key: "position",
+                            type: "text",
+                            value: "高辦"
+                        },
+                        {
+                            key: "job_description",
+                            type: "text",
+                            value: "協助客戶進行開戶及存款業務",
+                        },
+                        {
+                            key: "job_duration_from",
+                            type: "text",
+                            value: "2014/01/01",
+                        },
+                        {
+                            key: "job_duration_to",
+                            type: "text",
+                            value: "迄今",
+                        }
+                    ]
                 ],
                 width: 12,
             },
